@@ -108,9 +108,11 @@ html, body {
   max-width: 520px;
   width: 100%;
   text-align: center;
+  box-shadow: 0 32px 29px rgba(0, 0, 0, 0.58);
 }
 
 .card h1 {
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
   font-size: 36px;
   font-weight: 400;
   color: #333;
@@ -145,20 +147,22 @@ html, body {
   display: inline-block;
   background: #84983a;
   color: #fff;
-  font-family: inherit;
+  font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.02em;
   padding: 14px 32px;
   border-radius: 6px;
   text-decoration: none;
-  transition: background 0.2s ease, transform 0.15s ease;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
   cursor: pointer;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.29);
 }
 
 .download-btn:hover {
   background: #6e8230;
   transform: translateY(-1px);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.35);
 }
 
 .download-btn:active {
@@ -222,7 +226,8 @@ html, body {
 
   .card {
     padding: 44px 28px;
-    max-width: 100%;
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
     border-radius: 16px;
   }
 
