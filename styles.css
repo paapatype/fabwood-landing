@@ -1,0 +1,258 @@
+/* FabWood Landing Page */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========== DESKTOP HEADER ========== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-logo {
+  height: 36px;
+  width: auto;
+}
+
+.tagline {
+  font-size: 15px;
+  font-weight: 400;
+  color: #53331e;
+  font-style: italic;
+  padding-left: 20px;
+  border-left: 1px solid #ddd;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.header-contact .contact-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #84983a;
+}
+
+.header-contact .contact-value {
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+}
+
+.header-contact:hover .contact-value {
+  color: #84983a;
+}
+
+/* ========== MOBILE LOGO ========== */
+.mobile-logo {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 18px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.mobile-logo-img {
+  height: 36px;
+  width: auto;
+}
+
+/* ========== HERO / BACKGROUND ========== */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: url('assets/background.jpg') center center / cover no-repeat;
+}
+
+/* ========== CARD ========== */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  border: 3px solid #84983a;
+  padding: 60px 50px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+}
+
+.card h1 {
+  font-size: 36px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: #84983a;
+  margin: 0 auto 28px;
+  border-radius: 2px;
+}
+
+.divider-small {
+  width: 40px;
+  margin-bottom: 24px;
+}
+
+.card p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+/* ========== DOWNLOAD BUTTON ========== */
+.download-btn {
+  display: inline-block;
+  background: #84983a;
+  color: #fff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 14px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background: #6e8230;
+  transform: translateY(-1px);
+}
+
+.download-btn:active {
+  transform: translateY(0);
+}
+
+/* ========== MOBILE CONTACT (inside card) ========== */
+.mobile-contact {
+  display: none;
+  margin-top: 50px;
+  padding-top: 0;
+}
+
+.mobile-contact h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 14px;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 0;
+}
+
+.contact-row .contact-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #84983a;
+  min-width: 50px;
+}
+
+.contact-row .contact-value {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-row .contact-value:hover {
+  color: #84983a;
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: block;
+  }
+
+  .hero {
+    min-height: calc(100vh - 72px);
+    align-items: flex-start;
+    padding: 24px 16px 40px;
+  }
+
+  .card {
+    padding: 44px 28px;
+    max-width: 100%;
+    border-radius: 16px;
+  }
+
+  .card h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .card p {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  .download-btn {
+    font-size: 14px;
+    padding: 13px 28px;
+    width: 100%;
+  }
+
+  .mobile-contact {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    padding: 36px 22px;
+  }
+
+  .card h1 {
+    font-size: 24px;
+  }
+}

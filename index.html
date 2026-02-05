@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#84983a">
+  <title>FabWood - Where wood tells the story</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Desktop Header -->
+  <header class="header">
+    <div class="header-left">
+      <img src="assets/logo.svg" alt="FabWood" class="header-logo">
+      <span class="tagline">Where wood tells the story...</span>
+    </div>
+    <div class="header-right">
+      <a href="tel:+919844230730" class="header-contact">
+        <span class="contact-label">Phone</span>
+        <span class="contact-value">9844230730 / 9844030530</span>
+      </a>
+      <a href="mailto:fabwood30@gmail.com" class="header-contact">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">fabwood30@gmail.com</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Mobile Logo -->
+  <div class="mobile-logo">
+    <img src="assets/logo.svg" alt="FabWood" class="mobile-logo-img">
+  </div>
+
+  <!-- Main Content -->
+  <main class="hero">
+    <div class="card">
+      <h1>Explore our range<br>before we launch!</h1>
+      <div class="divider"></div>
+      <p>If you'd like a quick look at what we make, you can download our FabWood catalogue here. It covers our timber, boards, doors, cladding, and engineered wood solutions&mdash;made to spec and built to last.</p>
+      <a href="#" id="downloadBtn" class="download-btn">Download digital catalogue</a>
+
+      <!-- Mobile-only contact section -->
+      <div class="mobile-contact">
+        <h3>Get in Touch :</h3>
+        <div class="divider divider-small"></div>
+        <div class="contact-row">
+          <span class="contact-label">Phone</span>
+          <a href="tel:+919844230730" class="contact-value">9844230730 / 9844030530</a>
+        </div>
+        <div class="contact-row">
+          <span class="contact-label">Email</span>
+          <a href="mailto:fabwood30@gmail.com" class="contact-value">fabwood30@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Detect mobile vs desktop and serve the correct catalogue
+    function isMobile() {
+      return /Android|iPhone|iPad|iPod|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+        || (navigator.maxTouchPoints > 0 && window.innerWidth <= 768);
+    }
+
+    document.getElementById('downloadBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      const file = isMobile()
+        ? 'assets/catalogues/FabWood-Catalogue-Mobile.pdf'
+        : 'assets/catalogues/FabWood-Catalogue-Desktop.pdf';
+      const link = document.createElement('a');
+      link.href = file;
+      link.download = file.split('/').pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+</body>
+</html>
