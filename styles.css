@@ -31,12 +31,12 @@ html, body {
 }
 
 .header-logo {
-  height: 36px;
+  height: 42px;
   width: auto;
 }
 
 .tagline {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   color: #53331e;
   font-style: italic;
@@ -58,13 +58,13 @@ html, body {
 }
 
 .header-contact .contact-label {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #84983a;
 }
 
 .header-contact .contact-value {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   color: #333;
 }
@@ -84,7 +84,7 @@ html, body {
 }
 
 .mobile-logo-img {
-  height: 36px;
+  height: 42px;
   width: auto;
 }
 
@@ -103,7 +103,7 @@ html, body {
 .card {
   background: #fff;
   border-radius: 20px;
-  border: 3px solid #84983a;
+  border: none;
   padding: 60px 50px;
   max-width: 520px;
   width: 100%;
