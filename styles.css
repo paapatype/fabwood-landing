@@ -187,18 +187,16 @@ html, body {
 }
 
 .contact-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
   padding: 10px 0;
+  text-align: center;
 }
 
 .contact-row .contact-label {
   font-size: 14px;
   font-weight: 600;
   color: #84983a;
-  min-width: auto;
+  margin-right: 16px;
+  display: inline;
 }
 
 .contact-row .contact-value {
@@ -206,6 +204,7 @@ html, body {
   font-weight: 400;
   color: #333;
   text-decoration: none;
+  display: inline;
 }
 
 .contact-row .contact-value:hover {
@@ -237,10 +236,11 @@ html, body {
   }
 
   .card h1 {
-    font-size: 32px;
+    font-size: 38px;
     font-weight: 300;
     color: #53331e;
     margin-bottom: 16px;
+    line-height: 1.15;
   }
 
   .card p {
@@ -265,6 +265,6 @@ html, body {
   }
 
   .card h1 {
-    font-size: 24px;
+    font-size: 32px;
   }
 }
