@@ -79,10 +79,12 @@ html, body {
 .mobile-logo {
   display: none;
   background: #fff;
-  text-align: center;
   padding: 10px 20px;
   position: relative;
   z-index: 10;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .mobile-logo-img {
@@ -91,14 +93,14 @@ html, body {
 }
 
 .mobile-tagline {
-  display: block;
   font-size: 23px;
   font-weight: 300;
   color: #53331e;
   font-style: normal;
   letter-spacing: -0.02em;
   line-height: 30px;
-  margin-top: 8px;
+  padding-left: 20px;
+  border-left: 2px solid #84983a;
 }
 
 /* ========== HERO / BACKGROUND ========== */
@@ -236,7 +238,7 @@ html, body {
   }
 
   .mobile-logo {
-    display: block;
+    display: flex;
   }
 
   .hero {
