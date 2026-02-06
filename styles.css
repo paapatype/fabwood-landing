@@ -90,6 +90,17 @@ html, body {
   width: auto;
 }
 
+.mobile-tagline {
+  display: block;
+  font-size: 23px;
+  font-weight: 300;
+  color: #53331e;
+  font-style: normal;
+  letter-spacing: -0.02em;
+  line-height: 30px;
+  margin-top: 8px;
+}
+
 /* ========== HERO / BACKGROUND ========== */
 .hero {
   position: relative;
@@ -243,7 +254,7 @@ html, body {
   }
 
   .card h1 {
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 300;
     color: #53331e;
     margin-bottom: 16px;
@@ -257,8 +268,9 @@ html, body {
 
   .download-btn {
     font-size: 14px;
-    padding: 13px 28px;
-    width: 100%;
+    padding: 14px 40px;
+    width: auto;
+    border-radius: 6px;
   }
 
   .mobile-contact {
@@ -272,6 +284,6 @@ html, body {
   }
 
   .card h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
