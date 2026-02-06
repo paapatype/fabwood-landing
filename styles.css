@@ -69,10 +69,16 @@ html, body {
   font-size: 16px;
   font-weight: 400;
   color: #333;
+  text-decoration: none;
 }
 
-.header-contact:hover .contact-value {
+.header-contact .contact-value:hover {
   color: #84983a;
+}
+
+.contact-separator {
+  color: #999;
+  margin: 0 8px;
 }
 
 /* ========== MOBILE LOGO ========== */
@@ -229,6 +235,10 @@ html, body {
 
 .contact-row .contact-value:hover {
   color: #84983a;
+}
+
+.contact-row .contact-separator {
+  margin: 0 12px;
 }
 
 /* ========== MOBILE RESPONSIVE ========== */
