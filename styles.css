@@ -176,27 +176,29 @@ html, body {
   display: none;
   margin-top: 50px;
   padding-top: 0;
+  text-align: center;
 }
 
 .mobile-contact h3 {
   font-size: 16px;
   font-weight: 500;
   color: #333;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .contact-row {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 8px 0;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 0;
 }
 
 .contact-row .contact-label {
   font-size: 14px;
   font-weight: 600;
   color: #84983a;
-  min-width: 50px;
+  min-width: auto;
 }
 
 .contact-row .contact-value {
@@ -231,10 +233,13 @@ html, body {
     max-width: calc(100% - 40px);
     margin: 0 auto;
     border-radius: 16px;
+    border-left: 4px solid #84983a;
   }
 
   .card h1 {
-    font-size: 28px;
+    font-size: 32px;
+    font-weight: 300;
+    color: #53331e;
     margin-bottom: 16px;
   }
 
