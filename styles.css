@@ -233,7 +233,7 @@ html, body {
     max-width: calc(100% - 40px);
     margin: 0 auto;
     border-radius: 16px;
-    border-left: 4px solid #84983a;
+    border: 3px solid #84983a;
   }
 
   .card h1 {
