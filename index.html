@@ -82,6 +82,30 @@
     // Cursor-following 3D tilt effect (desktop only)
     if (!isMobile()) {
       const card = document.querySelector('.card');
+      let currentX = 0, currentY = 0;
+      let targetX = 0, targetY = 0;
+      let animating = false;
+
+      function lerp(start, end, factor) {
+        return start + (end - start) * factor;
+      }
+
+      function animate() {
+        currentX = lerp(currentX, targetX, 0.08);
+        currentY = lerp(currentY, targetY, 0.08);
+
+        card.style.transform = `perspective(1000px) rotateX(${currentY}deg) rotateY(${currentX}deg) translateY(-4px)`;
+
+        if (Math.abs(currentX - targetX) > 0.01 || Math.abs(currentY - targetY) > 0.01) {
+          requestAnimationFrame(animate);
+        } else {
+          animating = false;
+        }
+      }
+
+      card.addEventListener('mouseenter', function() {
+        card.style.transition = 'box-shadow 0.3s ease';
+      });
 
       card.addEventListener('mousemove', function(e) {
         const rect = card.getBoundingClientRect();
@@ -90,13 +114,19 @@
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        const rotateX = (y - centerY) / centerY * -6;
-        const rotateY = (x - centerX) / centerX * 6;
+        targetX = (x - centerX) / centerX * 4;
+        targetY = (y - centerY) / centerY * -4;
 
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        if (!animating) {
+          animating = true;
+          requestAnimationFrame(animate);
+        }
       });
 
       card.addEventListener('mouseleave', function() {
+        targetX = 0;
+        targetY = 0;
+        card.style.transition = 'transform 0.5s ease, box-shadow 0.3s ease';
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
       });
     }
