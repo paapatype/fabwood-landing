@@ -113,20 +113,20 @@ html, body {
 
 .card h1 {
   font-family: 'Alegreya Sans', sans-serif;
-  font-size: 36px;
-  font-weight: 400;
-  color: #333;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
+  font-size: 42px;
+  font-weight: 300;
+  color: #4a4a4a;
+  line-height: 1.15;
+  letter-spacing: 0;
+  margin-bottom: 24px;
 }
 
 .divider {
-  width: 60px;
-  height: 3px;
+  width: 50px;
+  height: 2px;
   background: #84983a;
-  margin: 0 auto 28px;
-  border-radius: 2px;
+  margin: 0 auto 32px;
+  border-radius: 1px;
 }
 
 .divider-small {
@@ -135,11 +135,11 @@ html, body {
 }
 
 .card p {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
-  color: #666;
-  line-height: 1.7;
-  margin-bottom: 36px;
+  color: #777;
+  line-height: 1.8;
+  margin-bottom: 32px;
 }
 
 /* ========== DOWNLOAD BUTTON ========== */
@@ -148,11 +148,11 @@ html, body {
   background: #84983a;
   color: #fff;
   font-family: 'Alegreya Sans', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  padding: 14px 32px;
-  border-radius: 6px;
+  padding: 12px 24px;
+  border-radius: 4px;
   text-decoration: none;
   transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
   cursor: pointer;
