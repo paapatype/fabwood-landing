@@ -36,12 +36,12 @@ html, body {
 }
 
 .tagline {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 300;
   color: #53331e;
   font-style: italic;
-  padding-left: 16px;
-  border-left: 1.5px solid rgba(132, 150, 14, 0.6);
+  padding-left: 14px;
+  border-left: 1px solid rgba(132, 150, 14, 0.5);
 }
 
 .header-right {
