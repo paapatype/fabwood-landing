@@ -71,8 +71,7 @@
         || (navigator.maxTouchPoints > 0 && window.innerWidth <= 768);
     }
 
-    document.getElementById('downloadBtn').addEventListener('click', function(e) {
-      e.preventDefault();
+    function triggerDownload() {
       const file = isMobile()
         ? 'assets/catalogues/FabWood-Catalogue-Mobile.pdf'
         : 'assets/catalogues/FabWood-Catalogue-Desktop.pdf';
@@ -82,7 +81,17 @@
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+    }
+
+    document.getElementById('downloadBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      triggerDownload();
     });
+
+    // Auto-download when arriving via QR code
+    if (new URLSearchParams(window.location.search).get('autodownload') === '1') {
+      triggerDownload();
+    }
 
     // Cursor-following 3D tilt effect (desktop only)
     if (!isMobile()) {
